@@ -159,7 +159,7 @@
 
 <c:if test="${view eq 'deleteResult'}">
     <div class="container">
-    <text class="color-4">All records listed below have been deleted:</text>
+    <h2>All records listed below have been deleted:</h2>
     <table class="table">
         <tr>
             <td>#</td><td>id</td><td>Address</td><td>Status</td>
@@ -172,7 +172,7 @@
     </table>
 </c:if>
 
-<footer class="footer-area">
+<footer>
     <a href="/manage?command=list">Apartment list</a>
     <a href="/manage?command=search_form">Search form</a>
     <a href="/manage?command=add_apartment_form">Add apartment</a>
