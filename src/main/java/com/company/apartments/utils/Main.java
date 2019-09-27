@@ -10,8 +10,8 @@ import java.util.List;
 
 public class Main {
     static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/mydb?serverTimezone=Europe/Kiev";
-    static final String DB_USER = "juser";
-    static final String DB_PASSWORD = "juser";
+    static final String DB_USER = "root";
+    static final String DB_PASSWORD = "password";
     static final String TABLE_APARTMENTS = "apartments";
     static final String TABLE_DISTRICTS = "districts";
     private static ApartmentDAOEx daoA;
