@@ -120,7 +120,7 @@ switch (command){
 }
     }
 
-   /*Invoked from search.jsp by "Apartment list" ("get_all" command) and "Delete" ("list_selection" command) links*/
+   /*Invoked from search.jsp:"Apartment list" or "Delete" links*/
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String command = (request.getParameter("command") == null) ? "" : request.getParameter("command");
         System.out.println(now() + " command:" +  command);
