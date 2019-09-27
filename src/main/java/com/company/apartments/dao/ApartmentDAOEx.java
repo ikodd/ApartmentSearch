@@ -47,7 +47,7 @@ public class ApartmentDAOEx extends AbstractDAO<Long, Apartment> {
                 int randBuild = rand.nextInt(NUM_RAND_BUILD) + 1;
                 int randStreetN = rand.nextInt(NUM_RAND_STREET) + 1;
                 sb.append(randBuild).append(" ")
-                        .append(streetNs.get(rand.nextInt(streetNs.size() - 1)))
+                        .append(streetNs.get(rand.nextInt(streetNs.size())))
                         .append(randStreetN);
                 double randArea = Math.random()*MAX_AREA + 1;
                 double randPrice = 0;
