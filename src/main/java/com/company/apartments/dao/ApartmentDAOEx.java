@@ -55,7 +55,6 @@ public class ApartmentDAOEx extends AbstractDAO<Long, Apartment> {
                 for(int j = MAX_ROOMS; j > 0; j--){
                     if(randArea <= MAX_AREA / j){
                         numRooms = MAX_ROOMS - j + 1;
-                        System.out.println("numRooms " + numRooms);
                         randPrice = Math.random()*(PRICE_STEP - INIT_PRICE) + INIT_PRICE;
                         break;
                     }
@@ -68,12 +67,8 @@ public class ApartmentDAOEx extends AbstractDAO<Long, Apartment> {
                 randPrice = Math.floor(randPrice)*numRooms;
                 ps.setDouble(5,randPrice);
                 ps.addBatch();
-
-                System.out.println(randDistr + " " + sb.toString() + " " + randArea +
-                        " " + numRooms + " " + randPrice);
                 sb.delete(0,sb.length());
             }
-            System.out.println(ps.getUpdateCount());
             ps.executeBatch();
             conn.commit();
 
